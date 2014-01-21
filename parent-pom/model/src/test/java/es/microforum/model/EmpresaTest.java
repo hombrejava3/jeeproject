@@ -21,15 +21,24 @@ public class EmpresaTest {
 	@Test
 	public void testObject() {
 		HashSet empleados=new HashSet();
-		Empresa empresa= new Empresa("458214", "viprisa", "Gran via",
+		String nif="458214";
+		Empresa empresa= new Empresa(nif, "viprisa", "Gran via",
 				new Date(), empleados);
-		Empresa empresa1=new Empresa("458214", "viprisa", "Gran via",
+		Empresa empresa1= new Empresa("458214", "viprisa", "Gran via",
 				new Date(), empleados);
 		assertTrue(empresa.equals(empresa1));
 		System.out.println("equals Empresa verificado");
-			
+		testToString();	
 		
 	}
 
-	
+	@Test
+	public void testToString() {
+		HashSet empleados=new HashSet();
+		String nif="458214";
+		Empresa empresa= new Empresa(nif, "viprisa", "Gran via",
+				new Date(), empleados);
+		assertTrue( empresa.toString().contains("458214"));
+		System.out.println("tostring verificado");
+	}
 }
