@@ -2,6 +2,9 @@ package es.microforum.model;
 
 import static org.junit.Assert.*;
 
+import java.util.Date;
+import java.util.HashSet;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,14 +17,25 @@ public class EmpleadoTest {
 	@Test
 	public void testEquals() {
 		byte[] imagen2 = null;
-		Empleado e= new Empleado("20102541", new Empresa(), "jose",
+		Empleado emp= new Empleado("458214", new Empresa(), "jose",
 				"Las Palmas", "tecnico", "empleadocoluma",
 				20000.0, 50.0, 160.0, imagen2);
-		Empleado j= new Empleado("20102541", new Empresa(), "jose",
-				"Las Palmas", "tecnico", "empleadocol",
+		Empleado emp2= new Empleado("458214", new Empresa(), "jose",
+				"Las Palmas", "tecnico", "empleadocolumna",
 				20000.0, 50.0, 160.0, imagen2);
-		assertTrue(e.equals(j));
-			System.out.println("ok");
+		assertTrue(emp.equals(emp2));
+			
 		
 	}	
+	
+	@Test
+	public void testToString() {
+		String dni="458214";
+		byte[] imagen2 = null;
+		Empleado ab= new Empleado(dni, new Empresa(),"jose",
+				"Las Palmas","tecnico", "empleadoc",
+				 20000.0, 50.0, 160.0, imagen2);
+		assertTrue( ab.toString().contains("458214"));
+		System.out.println("test empleado verificado");
+	}
 }

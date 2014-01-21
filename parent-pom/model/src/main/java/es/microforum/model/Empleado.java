@@ -186,4 +186,13 @@ public class Empleado implements java.io.Serializable {
 		this.imagen = imagen;
 	}
 
+	@Override
+	public String toString(){
+		
+		return " DNI=" + getDni() + ", Empresa=" + getEmpresa() + ", Nombre=" + getNombre()
+				+ ", Direccion=" + getDireccion() + ", TipoEmpleado=" + getTipoEmpleado()
+				+ ", EmpleadoCol=" + getEmpleadocol() + ", SalarioAnual=" + getSalarioAnual()
+				+ ", ValorHora=" + getValorHora() + ", CantidadHoras=" + getCantidadHoras(); 
+	}
+
 }

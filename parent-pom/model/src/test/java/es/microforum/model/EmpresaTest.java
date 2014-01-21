@@ -27,8 +27,7 @@ public class EmpresaTest {
 		Empresa empresa1= new Empresa("458214", "viprisa", "Gran via",
 				new Date(), empleados);
 		assertTrue(empresa.equals(empresa1));
-		System.out.println("equals Empresa verificado");
-		testToString();	
+		
 		
 	}
 
@@ -39,6 +38,6 @@ public class EmpresaTest {
 		Empresa empresa= new Empresa(nif, "viprisa", "Gran via",
 				new Date(), empleados);
 		assertTrue( empresa.toString().contains("458214"));
-		System.out.println("tostring verificado");
+		System.out.println("equals Empresa verificado");
 	}
 }
