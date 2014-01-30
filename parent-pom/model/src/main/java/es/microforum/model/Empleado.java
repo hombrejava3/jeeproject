@@ -1,6 +1,6 @@
 package es.microforum.model;
 
-// Generated 13-ene-2014 19:50:38 by Hibernate Tools 4.0.0
+// Generated 13-ene-2014 19:56:24 by Hibernate Tools 4.0.0
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -53,37 +53,6 @@ public class Empleado implements java.io.Serializable {
 		this.imagen = imagen;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((dni == null) ? 0 : dni.hashCode());
-		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Empleado other = (Empleado) obj;
-		if (dni == null) {
-			if (other.dni != null)
-				return false;
-		} else if (!dni.equals(other.dni))
-			return false;
-		if (nombre == null) {
-			if (other.nombre != null)
-				return false;
-		} else if (!nombre.equals(other.nombre))
-			return false;
-		return true;
-	}
-
 	@Id
 	@Column(name = "dni", unique = true, nullable = false, length = 45)
 	public String getDni() {
@@ -132,7 +101,7 @@ public class Empleado implements java.io.Serializable {
 		this.direccion = direccion;
 	}
 
-	@Column(name = "tipo-empleado", length = 45)
+	@Column(name = "tipoEmpleado", length = 45)
 	public String getTipoEmpleado() {
 		return this.tipoEmpleado;
 	}
@@ -150,7 +119,7 @@ public class Empleado implements java.io.Serializable {
 		this.empleadocol = empleadocol;
 	}
 
-	@Column(name = "salario-anual", precision = 22, scale = 0)
+	@Column(name = "salarioAnual", precision = 22, scale = 0)
 	public Double getSalarioAnual() {
 		return this.salarioAnual;
 	}
@@ -159,7 +128,7 @@ public class Empleado implements java.io.Serializable {
 		this.salarioAnual = salarioAnual;
 	}
 
-	@Column(name = "valor-hora", precision = 22, scale = 0)
+	@Column(name = "valorHora", precision = 22, scale = 0)
 	public Double getValorHora() {
 		return this.valorHora;
 	}
@@ -168,7 +137,7 @@ public class Empleado implements java.io.Serializable {
 		this.valorHora = valorHora;
 	}
 
-	@Column(name = "cantidad-horas", precision = 22, scale = 0)
+	@Column(name = "cantidadHoras", precision = 22, scale = 0)
 	public Double getCantidadHoras() {
 		return this.cantidadHoras;
 	}
@@ -186,6 +155,31 @@ public class Empleado implements java.io.Serializable {
 		this.imagen = imagen;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((dni == null) ? 0 : dni.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Empleado other = (Empleado) obj;
+		if (dni == null) {
+			if (other.dni != null)
+				return false;
+		} else if (!dni.equals(other.dni))
+			return false;
+		return true;
+	}
+	
 	@Override
 	public String toString(){
 		

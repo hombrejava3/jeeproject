@@ -1,7 +1,6 @@
 package es.microforum.serviceapi;
 
 import static org.junit.Assert.assertTrue;
-import es.microforum.serviceapi.HelloWorld;
 
 import org.junit.Test;
 
