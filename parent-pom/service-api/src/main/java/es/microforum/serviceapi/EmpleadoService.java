@@ -9,10 +9,20 @@ import es.microforum.model.Empleado;
 
 public interface EmpleadoService {
 
-	public abstract void agregarModificarEmpleado(Empleado empleado);
-	public abstract void eliminarEmpleado(Empleado empleado);
-	public abstract Empleado consultarEmpleadoPorDni(String dni);
-	public abstract List<Empleado> consultarEmpleados();
+	// Busca todos los contactos
+	public List<Empleado> findAll();
+	
+	// Busca un contacto por clave primaria
+	public Empleado findById(String id);
+	
+	// Inserta un contacto
+	public Empleado insert(Empleado empleado);
+	
+	// Modifica un contacto
+	public Empleado update(Empleado empleado);
+	
+	// Borra un contacto	
+	public void delete(Empleado empleado);
 	Page<Empleado> findAll(Pageable pageable);
 	
 }

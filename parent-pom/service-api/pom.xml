@@ -4,21 +4,18 @@
 	<parent>
 		<groupId>es.microforum</groupId>
 		<artifactId>parent-pom</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.4-SNAPSHOT</version>
 	</parent>
 	<artifactId>service-api</artifactId>
 	<dependencies>
 		<dependency>
-			<groupId>es.microforum</groupId>
-			<artifactId>model</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-commons-core</artifactId>
 		</dependency>
-
-
+		<dependency>
+			<groupId>es.microforum</groupId>
+			<artifactId>model</artifactId>
+			<version>0.0.4-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
